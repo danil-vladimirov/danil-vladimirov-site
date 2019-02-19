@@ -68,8 +68,8 @@ body {
 
 .rotate {
   transform: rotate(90deg);
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
 }
 
 .rotate .about-block {
