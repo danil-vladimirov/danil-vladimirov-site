@@ -106,7 +106,7 @@ body {
   padding-top: 100px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2200px) {
   body {
     background-color: #DADADA;
     color: #373737;
@@ -136,7 +136,7 @@ body {
     padding: 4vh 0 4vh 0;
   }
   .about-wrapper-2 img {
-    width: 30%;
+    width: 25vh;
   }
   .about-wrapper-3 {
     order: 1;
