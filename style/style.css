@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Arial Narrow';
+  src: url('../fonts/ArialNarrow.ttf');
+}
+
+@font-face {
+  font-family: 'Arial Black';
+  src: url('../fonts/ArialBlack.ttf');
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,7 +44,7 @@ body {
 }
 
 .about-wrapper-1 .about-block {
-  padding: 4vh;
+  padding: 4vh 0 4vh 0;
 }
 
 .about-wrapper-2 {
@@ -48,17 +58,25 @@ body {
 
 .about-wrapper-2 img {
   box-shadow: -10px 10px 24px rgba(0, 0, 0, 0.25);
+  width: 40%;
 }
 
 .about-block {
-  font-size: 32px;
-  font-family: Arial Narrow;
+  font-size: 2.2vw;
+  font-family: 'Arial Narrow';
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+.about-block .mobile {
+  font-size: 2.2vw;
+  font-family: 'Arial Narrow';
   text-transform: uppercase;
   line-height: normal;
 }
 
 .about-block b {
-  font-family: Arial Black;
+  font-family: 'Arial Black';
 }
 
 .about-block a {
@@ -66,13 +84,71 @@ body {
   color: white;
 }
 
+.about-wrapper-3 {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-wrapper-3 .mobile {
+  display: none;
+}
+
 .rotate {
   transform: rotate(90deg);
-  /* width: 200px;
-  height: 200px; */
 }
 
 .rotate .about-block {
   text-align: center;
   padding-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-color: #DADADA;
+    color: #373737;
+  }
+  .background {
+    width: 100%;
+  }
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .about-block {
+    font-size: 6.5vw;
+    padding: 4vh 0 4vh 0;
+  }
+  .about-block a {
+    color: #373737;
+  }
+  .about-wrapper-1 {
+    order: 3;
+    padding-bottom: 8vh;
+  }
+  .about-wrapper-2 {
+    order: 2;
+    padding: 4vh 0 4vh 0;
+  }
+  .about-wrapper-2 img {
+    width: 30%;
+  }
+  .about-wrapper-3 {
+    order: 1;
+  }
+  .rotate {
+    transform: rotate(0deg);
+  }
+  .about-wrapper-3 .about-block {
+    display: none;
+  }
+  .about-wrapper-3 .mobile {
+    display: flex;
+    padding: 8vh 8vh 4vh 8vh;
+  }
 }
