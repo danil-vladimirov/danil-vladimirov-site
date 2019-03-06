@@ -12,11 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  cursor: url(../images/cursor-default.png) 6 0,auto;
 }
 
 body {
   background-color: #7A7A7A;
   color: white;
+  cursor: url(../images/cursor-default.png) 6 0,auto;
 }
 
 .background {
