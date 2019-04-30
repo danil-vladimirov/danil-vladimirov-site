@@ -15,10 +15,13 @@
   cursor: url(../images/cursor-default.png) 6 0,auto;
 }
 
+a:hover{
+  cursor: url('../images/cursor-pointer.png') 6 0,pointer;
+}
+
 body {
   background-color: #7A7A7A;
   color: white;
-  cursor: url(../images/cursor-default.png) 6 0,auto;
 }
 
 .background {
@@ -106,6 +109,51 @@ body {
 .rotate .about-block {
   text-align: center;
   padding-top: 100px;
+}
+
+.orientir-floating {
+  position: fixed;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 100;;
+}
+
+.orientir-floating a {
+  display: inline-block;
+  font-size: 40px;
+  padding: 20px 30px;
+  /* border: 2px solid;
+  border-radius: 100%; */
+  text-decoration: none;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.orientir-floating img {
+  width: 40vw;
+}
+
+@-webkit-keyframes top-x {100% {-webkit-transform: translateX(calc(-100vw + 195px));transform: translateX(calc(-100vw + 195px));}}
+@keyframes top-x {100% {-webkit-transform: translateX(calc(-100vw + 195px));transform: translateX(calc(-100vw + 195px));}}
+@-webkit-keyframes top-x-large {100% {-webkit-transform: translateX(calc(-100vw + 327px));transform: translateX(calc(-100vw + 327px));}}
+@keyframes top-x-large {100% {/* -webkit-transform: translateX(calc(-100vw + 327px)); *//* transform: translateX(calc(-100vw + 327px)); */}}
+@-webkit-keyframes top-y {100% {-webkit-transform: translateY(calc(100vh - 95px)) rotate(20deg);transform: translateY(calc(100vh - 95px)) rotate(20deg);}}
+@keyframes top-y {100% {-webkit-transform: translateY(calc(100vh - 95px)) rotate(20deg);transform: translateY(calc(100vh - 95px)) rotate(20deg);}}
+@-webkit-keyframes top-y-large {100% {-webkit-transform: translateY(calc(100vh - 158px)) rotate(20deg);transform: translateY(calc(100vh - 158px)) rotate(20deg);}}
+@keyframes top-y-large {100% {-webkit-transform: translateY(calc(100vh - 158px)) rotate(20deg);transform: translateY(calc(100vh - 158px)) rotate(20deg);}}
+
+.orientir-floating.top {
+  top: 13px;
+  right: 0px;
+  pointer-events: none;
+  -webkit-animation: top-x 12s linear infinite alternate;
+  animation: top-x 12s linear infinite alternate;
+}
+
+.orientir-floating.top a {
+  pointer-events: auto;
+  -webkit-animation: top-y 7s linear infinite alternate;
+  animation: top-y 7s linear infinite alternate;
 }
 
 @media (max-width: 2200px) {
